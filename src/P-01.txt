@@ -1,0 +1,50 @@
+1. .gitgnore --> es un archivo de texto que le dice a Git qué archivos o carpetas ignorar en un proyecto.
+Ej.: 
+    # Ignora archivos del sistema Mac 
+    .DS_store
+
+    # Ignora la carpeta node_modules
+    node_modules
+
+    # Ignora todos los archivos de texto
+    *.txt   
+
+2. package.json --> Almacena información sobre un proyecto, como el nombre del proyecto,
+su versión, los scripts, las dependencias, etc.
+Ej.:
+    {
+    "name": "MyLab3",
+    "version": "1.0.0",
+    "description": "Lab3",
+    "main": "index.js",
+    "scripts": {
+        "dev": "",
+        "build": "",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "devDependencies": {
+        "vite": ""
+        }
+    }
+
+3. tsconfig.json --> El archivo tsconfig.json es el que indica en un proyecto que trabaja
+con TypeScript. Lo colocas en la raíz de carpetas del proyecto y en él situamos
+un JSON con todas las configuraciones de trabajo para el transpilador de TypeScript.
+Ej.:
+    {
+        "compilerOptions": {
+            "target": "es5",
+            "outDir": "dist",
+            "rootDir": "src"
+        }
+    }
+*target: indicamos que queremos que compile a código Javascript escrito con el estándar ES5, 
+que es el que todos los navegadores comprenden.
+
+*outDir: indicamos el directorio donde se van a colocar los archivos Javascript,
+".js", una vez transpilados.
+
+*rootDir: indica dónde están los archivos fuente, con el código TypeScript, ".ts",
+que debe ser traducido.

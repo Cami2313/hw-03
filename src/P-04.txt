@@ -1,0 +1,28 @@
+Arrow Function - Funciones Flecha
+Las funciones flechas fueron introducidas en la version ES6.
+Una expresión de función flecha es una alternativa compacta a una expresión de función tradicional,
+pero es limitada y no se puede utilizar en todas las situaciones.
+
+Diferencias y limitaciones:
+No tiene sus propios enlaces a this o super y no se debe usar como métodos.
+No tiene argumentos o palabras clave new.target.
+No apta para los métodos call, apply y bind, que generalmente se basan en establecer
+un ámbito o alcance.
+No se puede utilizar como constructor.
+No se puede utilizar yield dentro de su cuerpo.
+
+Ej.:
+    Funcion Tradicional
+        hello = function() {
+         return "Hello World!";
+        }
+    Funcion Flecha
+        hello = () => {
+         return "Hello World!";
+        }
+
+Se hace más corto; Si la función tiene solo una declaración y la declaración devuelve un valor,
+puede eliminar los corchetes y la palabra clave return:
+
+Ej.:
+    hello = () => "Hello World!";
